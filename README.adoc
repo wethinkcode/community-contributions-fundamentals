@@ -1,0 +1,131 @@
+= WeThinkCode Curriculum Toolchain
+
+Content is authored using Asciidoc and published using Antora.
+
+== Web UI Theme
+
+The customisd UI is at `git@github.com:wethinkcode/antora-docs-ui.git`.
+The theme modifies the default Antora UI, cloned from https://gitlab.com/antora/antora-ui-default.git.
+
+=== Repository configuration
+
+Clone the customised ui repo and setup a remote for the Antora UI Default repo.
+Then checkout the antora master branch to local branch `antora`.
+
+[source]
+---
+$ git clone git@github.com:wethinkcode/antora-docs-ui.git
+$ cd antora-docs-ui
+$ git remote add antora https://gitlab.com/antora/antora-ui-default.git
+---
+
+=== Merge changes from Antora UI Default
+
+To merge the latest upstream changes from the Antora UI Default repo.
+
+[source]
+---
+$ git checkout -b antora antora/master
+$ git pull
+$ git checkout main
+$ git merge antora
+---
+
+=== Preview the UI
+
+[source]
+---
+$ make preview
+---
+Then open `http://localhost:8052`
+
+=== Create a production bundle
+
+[source]
+---
+$ make build
+---
+
+This will create a `ui-bundle.zip` file in the `build` directory.
+
+TODO::
+Setup a build pipeline to publish the `ui-bundle.zip` as an artifact on github.
+Link playbook to published artifact.
+
+=== Antora theme docs
+
+Have a look at https://docs.antora.org/antora-ui-default/ for info on customising the theme.
+
+
+== Antora Playbook
+
+Clone git@github.com:wethinkcode/curriculum-playbook.git to edit the playbook.
+
+Note that the playbook repo has no content modules!
+
+=== Git Credentials
+Set the environment variable GIT_CREDENTIALS so that Antora can clone content modules.
+
+```
+$ export GIT_CREDENTIALS={some git credential token or username:password}@github.com
+```
+
+This environment variable is exposed to the docker container running Antora for the builds.
+See `docker-compose.yml` for details.
+
+For alternatives on settting up git credentials with Antora, 
+see https://docs.antora.org/antora/2.3/playbook/private-repository-auth/.
+
+
+=== Building the curriculum site
+
+Run `make build` to build the full site. The output is placed in the `build/site` directory.
+
+Alternatively, run `make clean` for a clean build. This deletes the `build/site` and `build/cache` directories.
+
+=== Preview the curriculum site
+
+Run `make preview` and open http://localhost:8051/ to view the curriculum on your local machine.
+
+=== Just in case ...
+
+Run `make shell` to shell into the docker container that is running antora.
+This is useful for troubleshooting the playbook.
+
+=== Adding a module to the playbook
+
+Edit `antora-playbook.yml` and add a section to the `content.sources` section.
+See https://docs.antora.org/antora/2.3/playbook/configure-content-sources/ for more info.
+
+Here is an example:
+
+[source,yaml]
+---
+content:
+  sources:
+  - url: https://github.com/wethinkcode/curriculum-module-x.git 
+    branches: [v2.0, v1.0]
+    start_path: docs
+    edit_url: false
+---
+
+== Content Tips
+
+=== Font-Awesome
+
+Support for inline icons using Font-Awesome is enabled. See https://asciidoctor.org/docs/user-manual/#inline-icons
+
+=== Diagram Markup
+
+Support via https://kroki.io/ is enabled. Also see https://github.com/Mogztter/asciidoctor-kroki.
+
+For example:
+
+```
+[plantuml]
+----
+alice -> bob
+bob -> alice
+----
+```
+

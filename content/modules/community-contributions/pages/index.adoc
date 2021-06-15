@@ -1,0 +1,33 @@
+
+= COMMUNITY CONTRIBUTIONS
+
+:icons: image
+:icontype: svg
+
+{empty} +
+
+Students can contribute any content they deem valuable to the curriculum site. This content must be relative to the work and explain concepts needed in the curriculum projects. This content can be of any format be it an article, a link or a workshop video.
+
+{empty} +
+
+== Contribution Process
+
+
+
+{empty} +
+
+== Antora
+
+
+
+{empty} +
+
+== Asciidoc
+
+
+{empty} +
+
+== Submit and Review
+
+
+

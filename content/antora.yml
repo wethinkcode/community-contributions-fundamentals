@@ -1,0 +1,6 @@
+name: community-contributions-fundamentals
+title: 101 Community Contributions
+version: '1.0'
+nav:
+- modules/001-hangman1/nav.adoc
+
