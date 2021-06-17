@@ -1,1 +1,1 @@
-*.icon:code[] Problem - Outline
+.icon:code[] Problem - Outline

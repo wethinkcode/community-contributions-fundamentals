@@ -1,2 +1,1 @@
 .icon:code[] Hangman - Iteration 1
-* xref:test.adoc[TEST]
