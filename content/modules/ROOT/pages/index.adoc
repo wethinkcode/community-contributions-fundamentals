@@ -1,47 +1,68 @@
 
-= COMMUNITY CONTRIBUTIONS FUNDAMENTALS
-
-:icons: image
-:icontype: svg
-:chapter: false
-:menuTitle: COMMUNITY CONTRIBUTIONS FUNDAMENTALS
-:pre: <b>101</b>
-:sequence: 101
-:uuid: 505079ba-4393-47ff-a956-330555b09f00
-:weight: 10
+= COMMUNITY CONTRIBUTIONS
 
 {empty} +
 
-This module is mandatory and teaches the foundations of programming.  Everything you learn here is necessary for programming anything.  For example, we use this foundational knowledge to program a mobile phone, a web application, or even machine learning systems and data science applications.
+Students can contribute any content they deem valuable to the curriculum site. This content must be relative to the work and explain concepts needed in the curriculum projects. This content can be of any format be it an article, a link or a workshop video.
 
 {empty} +
 
-== Programming
+== Contribution Process
 
-icon:project-diagram[] Making Decisions:: How to make your program do different things based on the data it receives.
-icon:redo[] Repeating Instructions:: How to get your program to do the same thing several times over.
-icon:object-group[] Structuring Data:: How to work with more complex kinds of data structures.
-icon:layer-group[] Combining Instructions:: Very often, we combine several instructions and reuse the combined instructions as a single instruction.
-icon:bars[] Processing Collections of Data:: How to work with lists of the same kind of data in a variety of ways.
-icon:cubes[] Modules and Packages:: How to use libraries from other developers (including open source libraries) and design a large program from smaller modules.
-
-{empty} +
-
-== Engineering
-
-icon:cubes[] Build:: How to structure your code files and package them to be run.
-icon:check-square[] Test:: How to write a program to test that your program works.
+. Fork the #community-contributions-fundamentals# repository
+. Create an asciidoc file under the #pages# folder under the project directory you want to contribute to
+. Write your content in this asciidoc file
+. Add any images to the #images# folder in the same directory
+. Add a reference to the file in the #nav.adoc# file under the same directory
+. Create a pull request to add your content to the main repository
+. Review any change requests and update your pull request
+. Your content can be merged upon approval by another student
 
 {empty} +
 
-== Communications
+== Antora
 
-icon:book[] Journaling:: This helps you reflect on your learning and articulate it. The more you do it, the better you get at communicating.
-icon:users[] Presentations:: You will give short-form presentations known as https://en.wikipedia.org/wiki/PechaKucha[PechaKucha]. This helps you become comfortable at speaking in teams and in front of groups of people.
+The WeThinkCode curriculum site is built using a tool called #Antora#. Antora builds HTML and CSS files from asciidoc files. It is important to understand Antora and how it works to be able to contribute to the curriculum site effectively. 
+
+Most important to know is how Antora expects the directory to be structured and how Antora builds the navigation using the #nav.adoc# files. The reading section links to the Antora documentation describing these processes and their requirements.
+
+.icon:glasses[] Self Study
+****
+* https://docs.antora.org/antora/2.3/standard-directories/[Antora Standard File and Directory Set]
+* https://docs.antora.org/antora/2.3/navigation/[Antora Navigation Assembly]
+****
 
 {empty} +
 
-== Teamwork
+== Asciidoc
 
-icon:users-cog[] Group Project:: You will work in small teams to build a program that, ordinarily, is too much to do on your own.
+Content for the WeThinkCode curriculum site is written in asciidoc format. Asciidoc files require at least a title and a body. Asciidoc also expects headings to be in order. It is important to understand asciidoc syntax to be able to write content effectively. The reading section refers to an asciidoc syntax cheatsheet that you can refer to when writing your documents.
+
+It is recommended to have an understanding of:
+
+* headers
+* blocks
+* text
+* macros
+* lists
+
+TIP: To enter an empty line use #$${empty} +$$#
+
+.icon:glasses[] Self Study
+****
+* https://powerman.name/doc/asciidoc[Asciidoc CheatSheet]
+****
+
+== GitHub
+
+If you are not sure how to fork a repository or create a pull request from a fork, below are some useful resources to guide you.
+
+.icon:glasses[] Self Study
+****
+* https://docs.github.com/en/github/getting-started-with-github/quickstart/fork-a-repo[Fork a Repo]
+* https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork[Create a Pull Request from a Fork]
+****
+
+
+
 
