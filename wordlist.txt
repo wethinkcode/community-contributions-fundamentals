@@ -40,3 +40,9 @@ url
 wethinkcode
 yaml
 yml
+CheatSheet
+asciidoc
+cheatsheet
+nav
+powerman
+quickstart
