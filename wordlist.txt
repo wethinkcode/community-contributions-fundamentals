@@ -5,7 +5,7 @@ svg
 adoc
 Journaling
 PechaKucha
-ba
+
 https
 menuTitle
 pre
