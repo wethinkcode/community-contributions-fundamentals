@@ -1,9 +1,6 @@
 name: Trigger Remote Dispatch
 
-on:
-  push:
-    - master
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   notify:
