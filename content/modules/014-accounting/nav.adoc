@@ -1,1 +1,1 @@
-* .icon:code[] Problem - Accounting App
+* Accounting

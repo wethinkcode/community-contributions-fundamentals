@@ -1,1 +1,1 @@
-.icon:code[] Mastermind - Iteration 2
+* Mastermind - Iteration 2

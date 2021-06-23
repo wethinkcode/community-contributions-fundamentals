@@ -1,1 +1,1 @@
-.icon:code[] Hangman - Iteration 3
+* Hangman - Iteration 3
