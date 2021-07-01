@@ -1,0 +1,17 @@
+ROOT
+001-hangman-iteration-1
+002-hangman-iteration-2
+003-pyramid
+004-hangman-iteration-3
+005-outline
+006-mastermind-iteration-1
+007-toy-robot-iteration-1
+008-mastermind-iteration-2
+009-mastermind-iteration-3
+010-recursion
+011-toy-robot-iteration-2
+012-word-processing
+013-toy-robot-iteration-3
+014-accounting
+015-toy-robot-iteration-4
+017-fix-the-bugs

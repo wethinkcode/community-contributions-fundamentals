@@ -1,1 +1,1 @@
-* .icon:code[] Coding Clinic
+* Coding Clinic
