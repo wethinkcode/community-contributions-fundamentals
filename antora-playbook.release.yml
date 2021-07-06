@@ -2,14 +2,13 @@
 site:
   title: WTC Curriculum
   url: https://1st.curriculum.wethinkco.cde
-  start_page: overview::index.adoc
   robots: allow
 content:
   sources:
   - url: ./
     branches: HEAD
     edit_url: false
-    start_path: content
+    start_path: release
 runtime:
   cache_dir: ./build/cache
 ui:

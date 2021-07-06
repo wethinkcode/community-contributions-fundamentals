@@ -2,7 +2,6 @@
 site:
   title: WTC Curriculum
   url: https://1st.curriculum.wethinkco.cde
-  start_page: overview::index.adoc
   robots: allow
 content:
   sources:
