@@ -38,11 +38,11 @@ ui:
 	ASSET_ID=$$(eval "$$CURL/latest" | jq .assets[0].id); \
 	eval "$$CURL/assets/$$ASSET_ID -o tmp/ui-bundle.zip -LJH 'Accept: application/octet-stream'"
 
-# shell: @ Copy the folders specified in release.txt from content to release
-copy: RELEASE ?=
-copy: DIRECTORY ?= $(shell pwd)
-copy:
-	echo $(DIRECTORY)
+# shell: @ Copy the folders specified in the specified release outline from content to release (e.g. make release RELEASE=1)
+.PHONY: release
+release: RELEASE ?=
+release: DIRECTORY ?= $(shell pwd)
+release:
 	rm -rf ./release/modules/*
 	cd content/modules ; \
 	while read -r module ; \

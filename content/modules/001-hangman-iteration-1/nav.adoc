@@ -1,2 +1,1 @@
 * Hangman - Iteration 1
-** xref:test.adoc[Testing]
