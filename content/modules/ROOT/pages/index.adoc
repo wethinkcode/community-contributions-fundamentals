@@ -11,18 +11,18 @@ Students can contribute any content they deem valuable to the curriculum site. T
 
 . Fork the https://github.com/wethinkcode/community-contributions-fundamentals[community-contributions-fundamentals] repository
 . Clone the forked repository to a local folder on your machine
-. Read the #Contributor's Guide# in the repository `ReadMe` to familiarize yourself with the necessary make commands
-. Run `make install` in the terminal to install dependencies
-. In the repository, navigate to `content/modules`
-. Navigate to the project folder you wish to contribute to
-. Navigate to the `pages` directory (if there is no `pages` directory, create one)
-. Create an AsciiDoc file (e.g. `content.adoc`)
-. Write your content in this AsciiDoc file using AsciiDoc syntax
-. Add any images to the #images# folder in the same directory (if it does not exist, create one)
-. Add a reference to the file in the #nav.adoc# file under the same directory (if it does not exist, create it)
-. Example reference: `$$* xref:content.adoc[My Content Title]$$`
-. Make sure that the `nav.adoc` in the folder is referenced in `antora.yml` under the `content` folder
-. Run `make preview` in the terminal and open `localhost:8051` in your browser to view your changes
+. Read the #Contributor's Guide# in the repository #ReadMe# to familiarize yourself with the necessary make commands
+. Run #make install# in the terminal to install dependencies
+. In the repository, navigate to #content/modules#
+. From there, navigate to the project folder you wish to contribute to
+. From there, navigate to the #pages# folder (if there is no #pages# folder, create one)
+. Create an AsciiDoc file (e.g. #content.adoc#)
+. Write your content in this AsciiDoc file using <<AsciiDoc, AsciiDoc syntax>>
+.. Remember that Antora requires each file to have at least a top-level heading and a paragraph with a space in between
+. Add a reference to your content file in the #nav.adoc# file under the same directory
+.. Example reference: `#$$** xref:content.adoc[My Content Title]$$#`
+.. Refer to https://docs.antora.org/antora/2.0/asciidoc/page-to-page-xref/[Page Cross References] for information on `xref`
+. Run #make preview# in the terminal and open http://localhost:8051/community-contributions-fundamentals/1.0/ in your browser to view your changes
 . Push your changes to your forked repository
 . From your forked repository, create a pull request to add your content to the main repository
 . Review any change requests and update your pull request
@@ -44,23 +44,26 @@ Most important to know is how Antora expects the directory to be structured and 
 
 {empty} +
 
+[[AsciiDoc]]
 == AsciiDoc
 
-Content for the WeThinkCode curriculum site is written in AsciiDoc format. AsciiDoc files require at least a title and a body. AsciiDoc also expects headings to be in order. It is important to understand AsciiDoc syntax to be able to write content effectively. The reading section refers to an AsciiDoc syntax cheat sheet that you can refer to when writing your documents.
+Content for the WeThinkCode curriculum site is written in AsciiDoc format. AsciiDoc files require at least a title and a body. AsciiDoc also expects headings to be in order. It is important to understand AsciiDoc syntax to be able to write content effectively. The reading section refers to the AsciiDoc documentation that you can refer to when writing your documents.
 
 It is recommended to have an understanding of:
 
-* headers
+* document headers
+* sections
 * blocks
-* text
-* macros
+* text formatting and punctuation
 * lists
+* links
+* images
 
 TIP: To enter an empty line use #$${empty} +$$#
 
 .icon:glasses[] Self Study
 ****
-* https://powerman.name/doc/asciidoc[AsciiDoc Cheat Sheet]
+* https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc Documentation]
 ****
 
 == GitHub
