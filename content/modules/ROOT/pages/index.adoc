@@ -20,7 +20,7 @@ Students can contribute any content they deem valuable to the curriculum site. T
 . Write your content in this AsciiDoc file using AsciiDoc syntax
 . Add any images to the #images# folder in the same directory (if it does not exist, create one)
 . Add a reference to the file in the #nav.adoc# file under the same directory (if it does not exist, create it)
-. Example reference: `* xref:content.adoc[My Content Title]`
+. Example reference: `$$* xref:content.adoc[My Content Title]$$`
 . Make sure that the `nav.adoc` in the folder is referenced in `antora.yml` under the `content` folder
 . Run `make preview` in the terminal and open `localhost:8051` in your browser to view your changes
 . Push your changes to your forked repository
