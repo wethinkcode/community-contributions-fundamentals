@@ -1,8 +1,7 @@
-# antora-playbook.yml
 site:
   title: WTC Curriculum
-  url: https://1st.curriculum.wethinkco.cde
-  robots: allow
+  url: https://1st.curriculum.wethinkco.de
+  robots: disallow
 content:
   sources:
   - url: ./
@@ -23,4 +22,3 @@ asciidoc:
     experimental: true
     kroki-fetch-diagram: true
     page-pagination: true
-

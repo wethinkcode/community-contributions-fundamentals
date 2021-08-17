@@ -1,7 +1,3 @@
-= WeThinkCode_ Curriculum Toolchain
-
-Content is authored using AsciiDoc and published using Antora.
-
 == Prerequisites
 
 In order to use the WTC Curriculum Toolchain, you need to install the following:
@@ -29,7 +25,7 @@ Run `make install` to install supported AsciiDoc extensions.
 
 Run `make preview` and open http://localhost:8051/ to view the component on your local machine.
 
-This first runs `make clean`, then `make build` and lastly, `make preview`.
+This first runs `make clean`, then `make build` then `make preview`.
 The `clean` target deletes the `build/site` and `build/cache` directories for a clean build.
 The `build` target builds a local copy of the component. The output is placed in the `build/site` directory.
 The `preview` target serves `build/site` on http://localhost:8051/
@@ -42,7 +38,13 @@ Refresh the page in the browser to see the changes.
 
 === Updating the UI
 
-Run `make ui` to pull the latest ui package.
+Run `make ui` to pull the latest UI package.
+
+=== Updating the tools
+
+Run `make tools` to pull the latest changes from the `curriculum-tools` repository.
+
+If you come across any merge conflicts, resolve them in VS Code and commit when you are done.
 
 === Content Tips
 
@@ -63,6 +65,9 @@ alice -> bob
 bob -> alice
 ----
 ```
+
+
+
 
 == Release Manager Guide
 
@@ -103,11 +108,17 @@ Run `make release` with the release number to clean the release folder and copy 
 
 Run `make preview PLAYBOOK=release` and open http://localhost:8051/ to view the component on your local machine.
 
-This first runs `make clean`, then `make build` and lastly, `make preview`.
+This first runs `make clean`, then `make build` then `make preview`.
 The `clean` target deletes the `build/site` and `build/cache` directories for a clean build.
 The `build` target builds a local copy of the component. The output is placed in the `build/site` directory.
 The `preview` target serves `build/site` on http://localhost:8051/
 
 === Updating the UI
 
-Run `make ui` to pull the latest ui package.
+Run `make ui` to pull the latest UI package.
+
+=== Updating the tools
+
+Run `make tools` to pull the latest changes from the `curriculum-tools` repository.
+
+If you come across any merge conflicts, resolve them in VS Code and commit when you are done.
